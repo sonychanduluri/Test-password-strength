@@ -1,0 +1,78 @@
+body {
+  font-family: sans-serif;
+  display: flex; 
+  justify-content: center; 
+  align-items: center;
+  height: 100vh;
+  background-color: #2D2D2D;
+  color: #EEE;
+}
+
+.container {
+  background-color: #021518;
+  padding: 2rem;
+  border-radius: 8px;
+  width: 360px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  position: relative;
+}
+
+input[type="password"], input[type="text"] {
+  width: calc(100% - 2rem); 
+  padding: 8px 1rem; 
+  font-size: 16px;
+  box-sizing: border-box;
+}
+
+.toggle-visibility {
+  position: absolute; 
+  top: 87px; 
+  right: 1rem;
+  cursor: pointer; 
+  color: #666;
+}
+
+.meter { 
+  width: 100%; 
+  height: 10px; 
+  margin-top: .5rem; 
+}
+
+.strength-text { 
+  margin: .5rem 0; 
+  font-weight: bold; 
+}
+
+.feedback { 
+  font-size: 0.9rem; 
+  color: #555; 
+}
+
+.requirements { 
+  margin-top: 1rem; 
+  font-size: 0.9rem; 
+}
+
+.req { 
+  display: flex; 
+  align-items: center; 
+}
+
+.req span { 
+  margin-left: 0.5rem; 
+}
+
+/* Shake animation */
+@keyframes shake {
+  0%,100% { margin-left: 0; }
+  25% { margin-left: 4px; }
+  75% { margin-left: -4px; }
+}
+
+.shake {
+  animation: shake 0.3s ease-in-out;
+}
+
+.error-border {
+  border: 2px solid #e74c3c !important;
+}

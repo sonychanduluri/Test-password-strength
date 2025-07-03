@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Password Checker with Shake</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="security.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/zxcvbn/4.4.2/zxcvbn.js"></script>
+</head>
+<body>
+  <div class="container" id="container">
+    <h2>Check your Password</h2>
+    <input type="password" id="password" placeholder="Enter password" />
+    <i class="fa fa-eye toggle-visibility" id="toggleVis" aria-label="Toggle password visibility"></i>
+
+    <meter class="meter" id="meter" min="0" max="4"></meter>
+    <div class="strength-text" id="strength-text"></div>
+    <div class="feedback" id="feedback"></div>
+
+    <div class="requirements">
+      <div class="req"><span id="len-icon">❌</span><span>At least 8 characters</span></div>
+      <div class="req"><span id="lower-icon">❌</span><span>Lowercase letter</span></div>
+      <div class="req"><span id="upper-icon">❌</span><span>Uppercase letter</span></div>
+      <div class="req"><span id="num-icon">❌</span><span>Number</span></div>
+      <div class="req"><span id="symbol-icon">❌</span><span>Symbol (e.g. !@#)</span></div>
+    </div>
+
+    <button id="submitBtn" style="margin-top:1rem;padding:10px;width:100%;">Submit</button>
+  </div>
+
+  <script src="security.js"></script>
+</body>
+</html>
